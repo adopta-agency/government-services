@@ -158,8 +158,8 @@ overview: true
                 
                 jsonStr = JSON.stringify(JSON.parse(jsonStr),null,2);  
                
-                document.getElementById('showjson').value = jsonStr;
-                //alert(mydump($Schema));
+                document.getElementById('source').value = jsonStr;
+                beautify(jsonStr); 
             })        
             
           }
@@ -167,4 +167,4 @@ overview: true
          }
     </script>
     
-    <textarea cols="75" rows="30" id="showjson" /></textarea><br />    
+    <textarea cols="40" rows="5" id="source" style="border: 1px solid #000; width: 100%; height: 750px;"></textarea>  
