@@ -19,17 +19,14 @@ overview: true
 </script>
 
 <form action="index.php" method="get">
-    <strong>Google URL:</strong> <input type="text" name="googleurl" id="googleurl" value="https://docs.google.com/spreadsheet/pub?key=0AmRmiTou7vbjdGZEaUdpV2lMNTRwZG5GMTdfWWRMUUE&output=html" size="75" />
-    <input type="button" onclick="runGenerator();" name="changekey" value="Run" />
-</form>
+    <div class="form-group">
+        <label for="id">Google Doc URL:</label>
+        <input type="text" class="form-control" name="googleurl" id="googleurl" value="https://docs.google.com/spreadsheet/pub?key=0AmRmiTou7vbjdGZEaUdpV2lMNTRwZG5GMTdfWWRMUUE&output=html">
+    </div>
+    <hr />
+    <center><button class="btn btn-default" onclick="runGenerator();" name="changekey" value="Run" />Generate JSON</button></center>
 
-<p><strong>Dependencies:</strong></p>
-<ul>
-    <li><a href="https://github.com/jsoma/tabletop" target="_blank">Tabletop</a></li>
-    <li><a href="http://jquery.com/" target="_blank">Jquery</a></li>   
-</ul>           
-   
-    <p>This project is meant to provide an easily forkable project that any federal, state, county or city government can use to generate service listings in a Google Doc and then output as JSON, just by using a Github repo and no server side code.</p>
+</form>
 
 <script type="text/javascript">
 
