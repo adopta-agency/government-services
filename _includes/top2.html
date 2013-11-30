@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Government Services - Form</title>
+  
+    <link rel="stylesheet" href="http://api.1.ongithub.com/js/codemirror/lib/codemirror.css">
+ 
+    <script src="http://api.1.ongithub.com/js/codemirror/lib/codemirror.js"></script>
+    <script src="http://api.1.ongithub.com/js/codemirror/mode/javascript/javascript.js"></script>
+ 
+    <script src="http://api.1.ongithub.com/js/jquery/jquery.js" type="text/javascript"></script>
+    <script src="http://api.1.ongithub.com/js/jquery/jquery.cookie.js" type="text/javascript"></script>
+    
+    <script src="http://api.1.ongithub.com/js/mustache.js" type="text/javascript"></script>
+    <link href="http://api.1.ongithub.com/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://api.1.ongithub.com/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <style type="text/css">
+    
+    #logo .site-title, #logo .site-description { display:block; }
+    body {background-repeat:no-repeat;background-position:top center;border-top:4px solid #000000;}
+    #header {background-repeat:repeat;background-position:top center;margin-top:0px;margin-bottom:0px;padding-top:20px;padding-bottom:15px;border:0px solid ;}
+    #logo .site-title a {font:normal 40px/1em Georgia, serif;color:#222222}
+    #logo .site-description {font:italic 14px/1em Georgia, serif;color:#999999}
+    #logo .site-title a {font:normal 40px/1em Georgia, serif;color:#222222}
+    #logo .site-description {font:italic 14px/1em Georgia, serif;color:#999999}
+    body, p {font:normal 14px/1.5em Arial, sans-serif;color:#555555}
+    h1 {font:normal 28px/1.5em Georgia, serif;color:#222222}h2 {font:normal 24px/1.5em Georgia, serif;color:#222222}h3 {font:normal 20px/1.5em Georgia, serif;color:#222222}h4 {font:normal 16px/1.5em Georgia, serif;color:#222222}h5 {font:normal 14px/1.5em Georgia, serif;color:#222222}h6 {font:normal 12px/1.5em Georgia, serif;color:#222222}
+    .post .title, .page .title, .post .title a:link, .post .title a:visited, .page .title a:link, .page .title a:visited {font:bold 20px/1.2em Arial, sans-serif;color:#222222; padding-bottom: 15px;}
+    .entry, .entry p{font:normal 14px/1.5em Georgia, serif;color:#555555}
+    .post-more {font:normal 12px/1.5em Arial, sans-serif;color:#868686;border-top:4px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
+    .nav-entries, .wp-pagenavi {border-top:1px solid #e6e6e6;border-bottom:4px solid #e6e6e6;}
+    .nav-entries a, .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi .current, .wp-pagenavi .on, .wp-pagenavi a:hover, .wp-pagenavi span.extend, .wp-pagenavi span.pages {font:italic 12px/1.5em Georgia, serif;color:#777777!important}
+    .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi span.extend, .wp-pagenavi span.pages, .wp-pagenavi span.current {color:#777777!important}
+    
+    .widget h3 {font:bold 14px/1.5em Arial, sans-serif;color:#555555;border-bottom:3px solid #e6e6e6;}
+    .widget_recent_comments li, #twitter li { border-color: #e6e6e6;}
+    
+    .widget p, .widget .textwidget {font:normal 12px/1.5em Arial, sans-serif;color:#555555;}
+    .widget {font:normal 12px/1.5em Arial, sans-serif;color:#555555;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;}
+    
+    .widget ul{
+        margin-left: 35px;
+        list-style: disc;
+    }
+    
+    .nav a, #navigation ul.rss a {font:normal 14px Arial, sans-serif;color:#555555}
+    #navigation {border-top:1px solid #dbdbdb;border-bottom:4px solid #dbdbdb;border-left:0px solid #dbdbdb;border-right:0px solid #dbdbdb;border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;}
+    #footer, #footer p {font:italic 14px Georgia, serif;color:#777777}
+    #footer {border-top:4px solid #dbdbdb;border-bottom:0px solid ;border-left:0px solid ;border-right:0px solid ;border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;}
+    
+    .bodycontent{
+        margin: 8px 0 8px 40px;
+        padding: 0px 0px 0px 0px;
+        }
+        
+     p
+        {
+        padding: 2px;   
+        }
+  
+    </style>     
+    
+    <link rel="stylesheet" type="text/css" href="http://api.1.ongithub.com/css/swagger.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="http://api.1.ongithub.com/css/hightlight.default.css" media="screen" />                        
+    
+    <script src='http://api.1.ongithub.com/js/bootstrap.js' type='text/javascript' /></script>
+    
+    <script src='http://api.1.ongithub.com/js/shred.bundle.js' type='text/javascript' /></script>
+    <script src='http://api.1.ongithub.com/js/jquery-1.8.0.min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/jquery.slideto.min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/jquery.wiggle.min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/jquery.ba-bbq.min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/handlebars-1.0.rc.1.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/underscore-min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/backbone-min.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/swagger.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/swagger-ui.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/highlight.7.3.pack.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/mustache.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/injector.js' type='text/javascript'></script>
+    <script src='http://api.1.ongithub.com/js/utilities.js' type='text/javascript'></script>  
+    <script src='http://api.1.ongithub.com/js/base64.js' type='text/javascript'></script>  
+   
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script src="http://api.1.ongithub.com/js/lib/beautify.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/beautify-css.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/beautify-html.js"></script>
+    <script src="http://api.1.ongithub.com/js/test/sanitytest.js"></script>
+    <script src="http://api.1.ongithub.com/js/test/beautify-tests.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/unpackers/javascriptobfuscator_unpacker.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/unpackers/urlencode_unpacker.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/unpackers/p_a_c_k_e_r_unpacker.js"></script>
+    <script src="http://api.1.ongithub.com/js/lib/unpackers/myobfuscate_unpacker.js"></script>
+
+    <script type="application/javascript">
+        var the = {
+            use_codemirror: (!window.location.href.match(/without-codemirror/)),
+            beautify_in_progress: false,
+            editor: null // codemirror editor
+        };
+
+        function run_tests() {
+            var st = new SanityTest();
+            run_beautifier_tests(st, Urlencoded, js_beautify, html_beautify, css_beautify);
+            JavascriptObfuscator.run_tests(st);
+            P_A_C_K_E_R.run_tests(st);
+            Urlencoded.run_tests(st);
+            MyObfuscate.run_tests(st);
+            var results = st.results_raw().replace(/ /g, '&nbsp;').replace(/\r/g, '·').replace(/\n/g, '<br>');
+            $('#testresults').html(results).show();
+        }
+
+
+        function any(a, b) {
+            return a || b;
+        }
+
+        function unpacker_filter(source) {
+            var trailing_comments = '',
+                comment = '',
+                unpacked = '',
+                found = false;
+
+            // cut trailing comments
+            do {
+                found = false;
+                if (/^\s*\/\*/.test(source)) {
+                    found = true;
+                    comment = source.substr(0, source.indexOf('*/') + 2);
+                    source = source.substr(comment.length).replace(/^\s+/, '');
+                    trailing_comments += comment + "\n";
+                } else if (/^\s*\/\//.test(source)) {
+                    found = true;
+                    comment = source.match(/^\s*\/\/.*/)[0];
+                    source = source.substr(comment.length).replace(/^\s+/, '');
+                    trailing_comments += comment + "\n";
+                }
+            } while (found);
+
+            var unpackers = [P_A_C_K_E_R, Urlencoded, /*JavascriptObfuscator,*/ MyObfuscate];
+            for (var i = 0; i < unpackers.length; i++) {
+                if (unpackers[i].detect(source)) {
+                    unpacked = unpackers[i].unpack(source);
+                    if (unpacked != source) {
+                        source = unpacker_filter(unpacked);
+                    }
+                }
+            }
+
+            return trailing_comments + source;
+        }
+
+
+        function beautify(source) {
+            
+            if (the.beautify_in_progress) return;
+
+            the.beautify_in_progress = true;
+
+            var output,
+                opts = {};
+
+            opts.indent_size = $('#tabsize').val();
+            opts.indent_char = opts.indent_size == 1 ? '\t' : ' ';
+            opts.max_preserve_newlines = $('#max-preserve-newlines').val();
+            opts.preserve_newlines = opts.max_preserve_newlines !== -1;
+            opts.keep_array_indentation = $('#keep-array-indentation').prop('checked');
+            opts.break_chained_methods = $('#break-chained-methods').prop('checked');
+            opts.indent_scripts = $('#indent-scripts').val();
+            opts.brace_style = $('#brace-style').val();
+            opts.space_before_conditional = $('#space-before-conditional').prop('checked');
+            opts.unescape_strings = $('#unescape-strings').prop('checked');
+            opts.wrap_line_length = $('#wrap-line-length').val();
+            opts.space_after_anon_function = true;
+
+            if (looks_like_html(source)) {
+                output = html_beautify(source, opts);
+            } else {
+                if ($('#detect-packers').prop('checked')) {
+                    source = unpacker_filter(source);
+                }
+                output = js_beautify(source, opts);
+            }
+            if (the.editor) {
+                the.editor.setValue(output);
+            } else {
+                $('#source').val(output);
+            }
+            
+            the.beautify_in_progress = false;
+        }
+
+        function looks_like_html(source) {
+            // <foo> - looks like html
+            // <!--\nalert('foo!');\n--> - doesn't look like html
+
+            var trimmed = source.replace(/^[ \t\n\r]+/, '');
+            var comment_mark = '<' + '!-' + '-';
+            return (trimmed && (trimmed.substring(0, 1) === '<' && trimmed.substring(0, 4) !== comment_mark));
+         }
+         
+        function newServiceArea()
+            {
+            $ServiceLocationCount = document.getElementById("service-location-count").value;     
+            $ServiceLocationCount++;
+                
+            $row = '<div class="form-group">';
+            $row += '<label for="service-location-name_1" class="col-sm-2 control-label">Name</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control" id="service-location-name_1" placeholder="Service Location One">';
+            $row += '</div>';           
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-address_1" class="col-sm-2 control-label">Address</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control" id="service-location-address_1" placeholder="123 Market Str.">';
+            $row += '</div>';
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-city_1" class="col-sm-2 control-label">City</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control" id="service-location-city_1" placeholder="San Francisco">';
+            $row += '</div>';
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-state_1" class="col-sm-2 control-label">State</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control input-sm" id="service-location-state_1" placeholder="CA">';
+            $row += '</div>';
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-postal-code_1" class="col-sm-2 control-label">Zip</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control input-sm" id="service-location-postal-code_1" placeholder="99999">';
+            $row += '</div>';
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-phone_1" class="col-sm-2 control-label">Phone</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control input-sm" id="service-location-phone_1" placeholder="555-555-5555">';
+            $row += '</div>';
+            $row += '</div>';
+            $row += '<div class="form-group">';
+            $row += '<label for="service-location-email_1" class="col-sm-2 control-label">Email</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control" id="service-location-email_1" placeholder="info@dot.com">';
+            $row += '</div>';
+            $row += '</div>'; 
+            $row += '<div class="form-group"><br style="clear: both;" /><hr /></div>';          
+            
+            $("#serviceLocation").append($row);
+            document.getElementById("service-location-count").value = $ServiceLocationCount;          
+            }  
+            
+        function newAudienceType($id)
+            {
+            $AudienceTypeCount = document.getElementById("audience-type-count").value;     
+            $AudienceTypeCount++;
+                
+            $row = '<div class="form-group">';
+            $row += '<label for="type_' + $AudienceTypeCount + '" class="col-sm-2 control-label">type</label>';
+            $row += '<div class="col-sm-10">';
+            $row += '<input type="text" class="form-control" id="type_' + $AudienceTypeCount + '" placeholder="individuals, employees" onfocus="newAudienceType(' + $AudienceTypeCount + ');" />';
+            $row += '</div>';
+            $row += '</div>';
+            
+            $("#audienceType").append($row);
+            document.getElementById("audience-type-count").value = $AudienceTypeCount;
+            }             
+            
+        function generateJSON(){
+          
+            // Let's buil the Schema
+            $Schema = {};
+            $Schema['@context'] = 'http://schema.org/';
+            $Schema['@type'] = 'GovernmentService';
+            $Schema['@id'] = document.getElementById("id").value;
+            $Schema['name'] = document.getElementById("name").value;  
+            
+            // Audience
+            $Audience = {};
+            $Audience["@type"] = "CivicAudience";
+            $Audience['audienceType'] = new Array();
+           
+            mf = document.getElementsByTagName("input"); 
+            $.each(mf, function(index, item) { 
+                $thisID = item.id; 
+                $thisArray = $thisID.split("_");
+                $thisField = $thisArray[0];
+                $thisRow = $thisArray[1];  
+                $thisValue = item.value;
+                if($thisField=="type" && $thisValue != ''){
+                  $Audience['audienceType'].push($thisValue);    
+                }
+            })            
+            
+            $Schema['audience'] = $Audience;
+        
+            $Schema['Description'] = document.getElementById("description").value;
+        
+            $Provider = {};
+            $Provider["@type"] = "GovernmentOrganization";
+            $Provider["name"] = document.getElementById("provider-name").value;;
+            $Provider["url"] = document.getElementById("provider-url").value;;
+            $Provider["logo"] = document.getElementById("provider-logo").value;;
+            
+            $Schema['provider'] = $Provider;        
+            
+            $ServiceArea = {};
+            $servicetypearea = document.getElementById("service-area-type").value;
+            $ServiceArea["@type"] = $servicetypearea;
+            
+            if($servicetypearea=='Country'){
+                $ServiceArea["name"] = "ocd-division/country:us";
+             }
+             else
+                {
+                $serviceareaname = document.getElementById("service-area-name").value;
+                $serviceareaname = $serviceareaname.replace(' ','_');
+                $serviceareaname = $serviceareaname.toLowerCase();
+                $ServiceArea["name"] = "ocd-division/country:us/" + $servicetypearea + ":" + $serviceareaname;    
+                }
+                   
+            $Schema['serviceArea'] = $ServiceArea;          
+
+            SServiceChannel = {};
+            SServiceChannel["@type"] = "ServiceChannel";   
+            SServiceChannel["serviceLocation"] = new Array();   
+            
+            $ServiceLocationCount = document.getElementById("service-location-count").value;           
+            $First = 1;
+            mf = document.getElementsByTagName("input"); 
+            $.each(mf, function(index, item) { 
+                
+                if($First==1){
+                    $ServiceLocation = {};
+                    $ServiceLocation["@type"] = "CivicStructure";                    
+                    $ServiceLocationAddress = {};   
+                    $First = 0;                   
+                }
+                
+                $thisID = item.id; 
+                $thisArray = $thisID.split("_");
+                $thisField = $thisArray[0];
+                $thisRow = $thisArray[1];  
+                $thisValue = item.value;
+                
+                //alert($thisField);
+                
+                if($thisField=="service-location-name"){
+                  $ServiceLocation["name"] = $thisValue;    
+                }
+                if($thisField=="service-location-address"){
+                  $ServiceLocationAddress["streetAddress"] = $thisValue;    
+                }
+                if($thisField=="service-location-city"){
+                  $ServiceLocationAddress["addressLocality"] = $thisValue;    
+                }
+                if($thisField=="service-location-state"){
+                  $ServiceLocationAddress["addressRegion"] = $thisValue;    
+                }
+                if($thisField=="service-location-postal-code"){
+                  $ServiceLocationAddress["postalCode"] = $thisValue;    
+                }    
+                if($thisField=="service-location-phone"){
+                  $ServiceLocationAddress["telephone"] = $thisValue;    
+                }  
+                if($thisField=="service-location-email"){
+                  $ServiceLocationAddress["email"] = $thisValue; 
+                  
+                 // alert(dodump($ServiceLocationAddress));  
+                  
+                  $ServiceLocation['address'] = $ServiceLocationAddress;
+                  SServiceChannel['serviceLocation'].push($ServiceLocation);  
+                  
+                  $First=1;                   
+                }                                                                                              
+            })    
+            
+            $Schema['serviceChannel'] = SServiceChannel;            
+                
+            // ServiceType
+            SServiceType = {};
+            SServiceType["@type"] = "ServiceType";
+            SServiceType['name'] = document.getElementById("service-type").value;;            
+            SServiceType['serviceTaxonomy'] = document.getElementById("service-taxonomy").value;; 
+            
+            $Schema['serviceType'] = SServiceType;                                                            
+
+            //alert('done!');
+            $SchemaJSON = JSON.stringify($Schema);
+            var out = document.getElementById("source");  
+            out.innerHTML = "";                          
+            out.appendChild(document.createTextNode($SchemaJSON)); 
+            
+            document.getElementById("OutputArea").style.display = '';         
+              
+            beautify($SchemaJSON); 
+              
+            }       
+        
+        $(function () {
+
+            var default_text = "";
+            var textArea = $('#source')[0];
+
+            if (the.use_codemirror && typeof CodeMirror !== 'undefined') {
+                the.editor = CodeMirror.fromTextArea(textArea, {
+                        theme: 'default',
+                        lineNumbers: true
+                    });
+                the.editor.focus();
+
+                the.editor.setValue(default_text);
+                $('.CodeMirror').click(function () {
+                    if (the.editor.getValue() == default_text) {
+                        the.editor.setValue('');
+                    }
+                });
+            } else {
+                $('#source').val(default_text).bind('click focus', function () {
+                    if ($(this).val() == default_text) {
+                        $(this).val('');
+                    }
+                }).bind('blur', function () {
+                    if (!$(this).val()) {
+                        $(this).val(default_text);
+                    }
+                });
+            }
+            
+        });
+    </script>    
+    
+</head>

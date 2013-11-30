@@ -1,0 +1,143 @@
+---
+layout: form
+title: Government Services Schema Form
+overview: true
+---  
+  
+<h1>Government Services Schema Form</h1>
+
+<p>This will generate a JSON-LD representation of your government services, which can then be submitted to search engines.</p> 
+
+<form role="form">
+
+    <div style="padding-left: 50px; width:500px;">  
+                                 
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" class="form-control" id="id" placeholder="URL where this file will be located when done">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="This is a text description of the service, providing a paragraph about what it is, what it does, providing as much detail as possible.">
+        </div>
+        <hr />
+        <input type="hidden" id="audience-type-count" value="1" />   
+        <p><strong><a href="http://schema.org/audienceType" target="_blank">Audience Type</a>:</strong></p>                                                                                                                                                                       
+        <div id="audienceType" style="width: 350px; padding-left: 15px;">  
+            <div class="form-group">
+                <label for="type_1" class="col-sm-2 control-label">type</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-sm" id="type_1" placeholder="ie. individuals" onfocus="newAudienceType(1);" />
+                </div>
+            </div>
+        </div>
+        <br style="clear: both;" />
+        <hr />                                                          
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3">A full description of the service being offered.</textarea>
+        </div>
+        <hr />
+        <strong><a href="http://schema.org/provider" target="_blank">Provider</a>:</strong><br />  
+        <div id="provider" style="width: 475px; padding-left: 15px;">
+            <div class="form-group">
+                <label for="provider-name">Name</label>
+                <input type="text" class="form-control" id="provider-name" placeholder="U.S. Government">
+            </div>
+            <div class="form-group">
+                <label for="provider-url">URL</label>
+                <input type="text" class="form-control" id="provider-url" placeholder="http://www.example.com/">
+            </div>
+            <div class="form-group">
+                <label for="provider-logo">Logo</label>
+                <input type="text" class="form-control" id="provider-logo" placeholder="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-government.jpg">
+            </div>   
+        </div>
+        <hr />
+        <input type="hidden" id="service-location-count" value="1" />   
+        <p><strong>Service Locations: (<a href="#" onclick="newServiceArea(1); return false;">add another</a>)</strong></p>                                                                                                                                                                       
+        <div id="serviceLocation" style="width: 475px; padding-left: 15px;">  
+            <div class="form-group">
+                <label for="service-location-name_1" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="service-location-name_1" placeholder="Service Location One">
+                </div>                                        
+            </div>
+            <div class="form-group">
+                <label for="service-location-address_1" class="col-sm-2 control-label">Address</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="service-location-address_1" placeholder="123 Market Str.">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service-location-city_1" class="col-sm-2 control-label">City</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="service-location-city_1" placeholder="San Francisco">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service-location-state_1" class="col-sm-2 control-label">State</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-sm" id="service-location-state_1" placeholder="CA">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service-location-postal-code_1" class="col-sm-2 control-label">Zip</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-sm" id="service-location-postal-code_1" placeholder="99999">
+                </div>
+            </div>  
+            <div class="form-group">
+                <label for="service-location-phone_1" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control input-sm" id="service-location-phone_1" placeholder="555-555-5555">
+                </div>
+            </div>  
+            <div class="form-group">
+                <label for="service-location-email_1" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="service-location-email_1" placeholder="info@dot.com">
+                </div>
+            </div>  
+            <div class="form-group"><br style="clear: both;" /><hr /></div>                                                                                                                                                                         
+        </div>
+        <p><strong>Service Area:</strong> (<a href="https://github.com/opencivicdata/ocd-division-ids" target="_blank">explore</a>)</p>
+        <div id="service-area" style="width: 475px; padding-left: 15px;">
+           <div class="form-group">
+                <label for="service-area-type">Type (select area type)</label>
+                <select class="form-control" id="service-area-type">
+                  <option value="country">Country</option>
+                  <option value="city">City</option>
+                  <option value="state">State</option>
+                </select>                                        
+            </div>
+            <div class="form-group">
+                <label for="service-area-name">Name (enter name of area based upon type)</label>
+                <input type="text" class="form-control" id="service-area-name" placeholder="United States">
+            </div>      
+        </div>
+        <hr />                                
+        <p><strong>Service Tags:</strong></p>  
+        <div id="service" style="width: 475px; padding-left: 15px;"> 
+           <div class="form-group">
+                <label for="service-type">Types (<a href="http://openeligibility.org/glos/">explore</a>)</label>
+                <input type="text" class="form-control" id="service-type" placeholder="Common separated list of service types">
+            </div>
+            <div class="form-group">
+                <label for="service-taxonomy">Taxonomy (<a href="http://openeligibility.org">openeligibility.org</a>)</label>
+                <input type="text" class="form-control" id="service-taxonomy" placeholder="openeligibility.org">
+            </div>   
+        </div>                          
+        <input type="hidden" id="endrow_1" value="1" />
+        <hr />
+        
+    </div>
+
+</form>
+
+<center><button type="button" class="btn btn-default" onclick="generateJSON(); return false;">Generate JSON Schema</button></center>
+                   
+<div id="OutputArea" style="display:none;">
+    <br />
+    <textarea cols="40" rows="5" id="source" style="border: 1px solid #000; width: 100%; height: 475px;"></textarea>
+</div>  
