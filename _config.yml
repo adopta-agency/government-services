@@ -1,22 +1,23 @@
 title : Public Private Sector
 
-safe: true
-lsi: false
-pygments: true
-auto: true
+version:      1.1.1
+author:
+  name:       'Kin Lane'
+  email:      'info@apievangelist.com'
+markdown:     kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
 
 source: government-services
 destination: government-services
 
-permalink: /:categories/:year/:month/:day/:title 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-
-paginate: 1000
 paginate_path: "/blog/page:num"
 
-production_url : http://government.services.publicprivatesector.org/
+production_url : http://government.services.adopta.agency
 
-BASE_PATH : http://government.services.publicprivatesector.org/
+BASE_PATH : http://government.services.adopta.agency
 
 archive_path: /archive.html
 categories_path : /categories.html
