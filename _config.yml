@@ -1,4 +1,4 @@
-title : Public Private Sector
+title : Government Services
 
 version:      1.1.1
 author:
@@ -22,3 +22,12 @@ BASE_PATH : http://government.services.adopta.agency
 archive_path: /archive.html
 categories_path : /categories.html
 tags_path : /tags.html
+
+image : http://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png
+imagesecure : https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png
+
+# Footer
+footer_title: API Evangelist
+footer_link: http://apievangelist.com
+footer_image_source: https://s3.amazonaws.com/kinlane-productions/footer/empowered-by-you-banner.png
+footer_image_width: 60
