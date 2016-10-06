@@ -13,6 +13,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 source: government-services
 destination: government-services
 
+paginate: 20
 paginate_path: "/blog/page:num"
 
 production_url : http://government.services.adopta.agency
