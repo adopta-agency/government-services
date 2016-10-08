@@ -12,8 +12,8 @@ overview: true
 
     function runGenerator()
         {
-        url = document.getElementById("googleurl").value;
-        generateJSON(url);
+        key = document.getElementById("googlekey").value;
+        generateJSON(key);
         }
 
 </script>
@@ -21,7 +21,7 @@ overview: true
 <form action="#" method="get">
     <div class="form-group">
         <label for="id">Google Doc URL:</label>
-        <input style="width: 75%;" type="text" class="form-control" name="googleurl" id="googleurl" value="https://docs.google.com/spreadsheets/d/1Ue4KlTgRE4X8z7jUt7ed_Gcu4NnovGSja8cRvkN5WcI/edit?usp=sharing">
+        <input style="width: 75%;" type="text" class="form-control" name="googlekey" id="googlekey" value="1Ue4KlTgRE4X8z7jUt7ed_Gcu4NnovGSja8cRvkN5WcI">
     </div>
     <hr />
     <center><button class="btn btn-default" onclick="runGenerator(); return false;" name="changekey" value="Run" />Generate JSON</button></center>
@@ -29,13 +29,11 @@ overview: true
 
 <script type="text/javascript">
 
-    function generateJSON(url)
+    function generateJSON(key)
         {
 
-          var public_spreadsheet_url = url;
-console.log(public_spreadsheet_url);
           $(document).ready( function() {
-            Tabletop.init( { key: public_spreadsheet_url,
+            Tabletop.init( { key: key,
                              callback: showInfo,
                              wanted: [ "Services", "Service Locations" ],
                              debug: true } )
