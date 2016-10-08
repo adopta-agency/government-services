@@ -302,6 +302,7 @@ overview: true
 
         //alert('done!');
         $SchemaJSON = JSON.stringify($Schema);
+        console.log($SchemaJSON);
         var out = document.getElementById("source");
         out.innerHTML = "";
         out.appendChild(document.createTextNode($SchemaJSON));
