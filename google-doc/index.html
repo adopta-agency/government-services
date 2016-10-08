@@ -50,7 +50,7 @@ console.log(public_spreadsheet_url);
 
             $.each( tabletop.sheets("Services").all(), function(i, service) {
 
-                console.log(servicename);
+
                 $servicename = service.servicename;
                 $uniqueid = service.uniqueid;
                 $description = service.description;
@@ -69,8 +69,8 @@ console.log(public_spreadsheet_url);
                 $availablelanguages = service.availablelanguages;
                 $serviceurl = service.serviceurl;
                 $servicephone = service.servicephone;
+                console.log($servicename);
 
-            
                 beautify(jsonStr);
             })
 
