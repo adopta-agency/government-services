@@ -49,7 +49,30 @@ console.log(public_spreadsheet_url);
             });
 
             $.each( tabletop.sheets("Services").all(), function(i, service) {
-              console.log(service);
+
+
+                $servicename = service['Service Name'];
+                console.log($servicename);
+                $uniqueid = service.uniqueid;
+                $description = service.description;
+                $url = service.url;
+                $image = service.image;
+                $alternatenames = service.alternatenames;
+                $servicearea = service.servicearea;
+                $providername = service.providername;
+                $providerlogo = service.providerlogo;
+                $providerurl = service.providerurl;
+                $operator = service.operator;
+                $servicetype = service.servicetype;
+                $servicetypetaxonomyused = service.servicetypetaxonomyused;
+                $produces = service.produces;
+                $audience = service.audience;
+                $availablelanguages = service.availablelanguages;
+                $serviceurl = service.serviceurl;
+                $servicephone = service.servicephone;
+                console.log($servicename);
+
+                beautify(jsonStr);
             })
 
           }
