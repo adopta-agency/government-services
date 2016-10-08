@@ -110,15 +110,13 @@ overview: true
 
                 $.each(tabletop.sheets("Service Locations").all(), function(i, servicelocations) {
 
-                    consolelog(servicelocations);
-                    
-                    $servicelocation_name = servicelocations.name;
-                    $servicelocation_addressstreet = servicelocations.addressstreet;
-                    $servicelocation_addresscity = servicelocations.addresscity;
-                    $servicelocation_addressstate = servicelocations.addressstate;
-                    $servicelocation_addresszip = servicelocations.addresszip;
-                    $servicelocation_telephone = servicelocations.telephone;
-                    $servicelocation_service_name = servicelocations.servicename;
+                    $servicelocation_name = servicelocations['Name'];
+                    $servicelocation_addressstreet = servicelocations['Address Street'];
+                    $servicelocation_addresscity = servicelocations['Address City'];
+                    $servicelocation_addressstate = servicelocations['Address State'];
+                    $servicelocation_addresszip = servicelocations['Address Zip'];
+                    $servicelocation_telephone = servicelocations['Telephone'];
+                    $servicelocation_service_name = servicelocations['Service Name'];
 
                     //echo "Location Name: " . $servicelocation_name . "<br />";
                     //echo "Location Address: " . $servicelocation_addressstreet . "<br />";
